@@ -8,7 +8,7 @@ interface FormProps {
 }
 
 const Form: React.FC<FormProps> = ({ setVisible, note, setNote, addNote }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNote(e.target.value);
   };
   return (
@@ -16,10 +16,9 @@ const Form: React.FC<FormProps> = ({ setVisible, note, setNote, addNote }) => {
       <h2 className="text-orange-800 mb-4 text-3xl font-bold">
         Ajouter une note
       </h2>
-      <input
+      <textarea
         value={note}
         onChange={handleChange}
-        type="text"
         placeholder="Enter your note"
         className="rounded-lg p-2 w-3/4 h-[20%] mb-2 caret-black text-black"
       />

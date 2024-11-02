@@ -24,7 +24,7 @@ export default function Notes({
               className="flex justify-between items-center mt-4 w-full max-w-[60%] py-[1.5%] border border-slate-600 rounded-lg bg-slate-600"
               key={index}
             >
-              <span className="scrollable-container w-full ml-8 mr-2 overflow-x-auto whitespace-nowrap">
+              <span className="w-full ml-8 mr-2 max-h-[4.5em] line-clamp-3 whitespace-normal">
                 {note}
               </span>
               <button
